@@ -1,5 +1,6 @@
 *
 {
+    line-height: 50px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -90,7 +91,7 @@ header nav ul li a:hover
 }
 .UpperIMG
 {
-    margin-top: 50px;
+    margin-top: 80px;
     background:url(https://wallpaperaccess.com/full/1111946.jpg) no-repeat;
     background-size:cover;
     background-position: center center;
@@ -110,9 +111,6 @@ main section{
     margin-left: 30px;
     transition: 1s;
 }
-main section:hover{
-    transform: scale(1.2);
-}
 main section ol{
     margin-left: 100px;
     font-size: 30px;
@@ -121,16 +119,23 @@ main section ol li a{
     color: #000; 
 }
 main section ol li a:hover{
-    background-color: rgb(152, 234, 234);
-    color: darkblue;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
-
+.OOPadvantages{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
 main aside {
+    padding-top: 60px;
     width: 40%;
     padding-left: .5rem;
     margin-left: .5rem;
     float: right;
-    box-shadow: inset 5px 0 5px -5px #000000;
+    box-shadow:inset 5px 0 5px -5px #000000;
 }
 main article{
     padding: 50px;
@@ -156,6 +161,27 @@ main blockquote p::after {
     font-size: 30px;
     font-weight: bold;
 }
+
+.codeExample {
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: auto;
+    width: auto;
+}
+.codeExample:hover {
+    color: #fff;
+    background-color: #000;
+}
+.codeExample p{
+    text-align: left;
+    margin-left: 50px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
 .bottomLinks, .bottomLinks li {
     margin: 0;
     padding: 0;
