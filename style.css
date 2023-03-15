@@ -78,7 +78,7 @@ header nav ul li a
 {
     padding: 15px;
     color: #000;
-    font-size: 20px;
+    font-size: 25px;
     display: block;
     text-decoration: none;
     transition: 1s;
@@ -89,6 +89,24 @@ header nav ul li a:hover
     color: #fff;
     transform: scale(1.2);
 }
+nav ul li ul{
+    position: absolute;
+    width: 350px;
+    background: white;
+    display: none;
+}
+nav ul li:hover > ul {
+    display: initial;
+}
+nav ul li ul li{
+    width: 300px;
+    margin-left: 25px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    justify-content:space-between;
+    align-items: center;
+}
+ 
 .UpperIMG
 {
     margin-top: 80px;
