@@ -2,35 +2,63 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>HELPYX</title>
 </head>
-<body>
+<body style="background-color: gray;">
     <header>
         <a href="main.html" class="logo">HELPYX</a>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
-                <li><a href="mainpageCS.html">C#</a></li>
-                <li><a href="mainpagePython.html">Python</a></li>
-                <li><a href="mainpageJS.html">Js</a></li>
-                <li><a href="ContactsPage.html">Contacts</a></li>
+                <li><a href="main.html">На головну</a></li>
+                <li><a href="#">Навчання</a>
+                <ul>
+                    <li><a href="mainpageCS.html">C#</a></li>
+                    <li><a href="ContactsPage.html">Зворотній зв'язок</a></li>
+                </ul>
+                </li>
             </ul>
         </nav>
-    </header>    
-    
+    </header>  
     <div class="UpperIMG"></div>
-    <h1>Welcome!</h1>
-     <footer>
-                <ul>
-                    <li><a href="instagram.com">Instagram</a></li>
-                    <li><a href="google.com">Telegram</a></li>
-                    <li><a href="mailto:ternak04@gmail.com">Gmail</a></li>
-                </ul>
-                <a href="ContactsPage.html" class="fter">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
-        </footer>
-    </body>
-    </html>
+    <h1>Зворотній зв'язок</h1>
+    <main>
+       <form >
+        <ul>
+            <li>Як до Вас звертатись?</li>
+            <input type="text" id="name" required placeholder="Ім'я">
+            <li>Опишіть проблему з якою Ви зіштовхнулись на сайті, або Ваші пропозиції.</li>
+            <textarea  id="text" name="text"></textarea>
+            <li>Заповніть контактні дані. Це не обов'язково, а лише у тому разі, якщо хочете отримати фідбек.</li>
+            <input type="email" placeholder="Електронна пошта">
+            <input type="tel" placeholder="Номер телефону">
+            <li><input type="checkbox" id="checkbox">Я повідомлений(-а), що моя особиста інформація не буде розголошенна третім особам.</li>
+            <button id="submit" onclick="checked()">Відправити</button>
+        </ul>   
+       </form>              
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
+            <li><a href="https://www.google.com">Telegram</a></li>
+            <li><a href="mailto:ternak04@gmail.com">Gmail</a></li>
+        </ul>
+        <a href="ContactsPage.html" class="fter">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
+    </footer>
+</body>
+<script>
+    document.querySelector('#submit').onclick = function(e){
+        e.preventDefault();
+        if(document.querySelector('#checkbox').checked)
+        {
+            alert('Дякую')
+            location.reload();
+        }
+        else{
+            alert('Помилка');
+        }
+    }
+</script>
+</html>
