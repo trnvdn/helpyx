@@ -3,51 +3,56 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Безкоштовний туторіал по C#">
+    <meta name="keywords" content="C# гайд,C# туторіал,вчити C#">
+    <meta name="author" content="Терновий Данііл">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELPYX</title>
 </head>
-<body style="background-color: gray;">
-    <header>
-        <a href="main.html" class="logo">HELPYX</a>
-        <nav>
-            <ul>
-                <li><a href="main.html">На головну</a></li>
-                <li><a href="#">Навчання</a>
-                <ul>
-                    <li><a href="mainpageCS.html">C#</a></li>
-                    <li><a href="ContactsPage.html">Зворотній зв'язок</a></li>
+<div class="page">
+    <body style="background-color: gray;">
+        <header class="header">
+            <a href="main.html" class="header__logo">HELPYX</a>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="main.html" class="nav__link">На головну</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Навчання</a>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="mainpageCS.html" class="nav__sublink">C#</a></li>
+                            <li class="nav__subitem"><a href="ContactsPage.html" class="nav__sublink">Зворотній зв'язок</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>  
-    <div class="UpperIMG"></div>
-    <h1>Зворотній зв'язок</h1>
-    <main>
-       <form >
-        <ul>
-            <li>Як до Вас звертатись?</li>
-            <input type="text" id="name" required placeholder="Ім'я">
-            <li>Опишіть проблему з якою Ви зіштовхнулись на сайті, або Ваші пропозиції.</li>
-            <textarea  id="text" name="text"></textarea>
-            <li>Заповніть контактні дані. Це не обов'язково, а лише у тому разі, якщо хочете отримати фідбек.</li>
-            <input type="email" placeholder="Електронна пошта">
-            <input type="tel" placeholder="Номер телефону">
-            <li><input type="checkbox" id="checkbox">Я повідомлений(-а), що моя особиста інформація не буде розголошенна третім особам.</li>
-            <button id="submit" onclick="checked()">Відправити</button>
+            </nav>
+        </header>
+<div class="UpperIMG"></div>
+    <main class="main">
+        <h1 class="main__h1">Зворотній зв'язок</h1>
+       <form class="main__form">
+        <ul class="form__list">
+            <li class="form__item-list">Як до Вас звертатись?</li>
+            <input class="form__item-input" type="text" id="name" required placeholder="Ім'я">
+            <li class="form__item-list">Опишіть проблему з якою Ви зіштовхнулись на сайті, або Ваші пропозиції.</li>
+            <textarea class="form__item-textarea" id="text" name="text"></textarea>
+            <li class="form__item-list">Заповніть контактні дані. Це не обов'язково, а лише у тому разі, якщо хочете отримати фідбек.</li>
+            <input class="form__item-input" type="email" placeholder="Електронна пошта">
+            <input class="form__item-input" type="tel" placeholder="Номер телефону">
+            <li class="form__item-list"><input class="form__item-checkbox" type="checkbox" id="checkbox">Я повідомлений(-а), що моя особиста інформація не буде розголошенна третім особам.</li>
+            <button class="form__item-button" id="submit" onclick="checked()">Відправити</button>
         </ul>   
        </form>              
     </main>
-    <footer>
-        <ul>
-            <li><a href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
-            <li><a href="https://www.google.com">Telegram</a></li>
-            <li><a href="mailto:ternak04@gmail.com">Gmail</a></li>
-        </ul>
-        <a href="ContactsPage.html" class="fter">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
-    </footer>
 </body>
+</div>  
+<footer class="footer">
+    <ul class="footer__list">
+        <li class="footer__item"><a class="footer__link" href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
+        <li class="footer__item"><a class="footer__link" href="https://www.google.com">Telegram</a></li>
+        <li class="footer__item"><a class="footer__link" href="mailto:ternak04@gmail.com">Gmail</a></li>
+    </ul>
+    <a href="ContactsPage.html" class="footer__signature">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
+</footer>
+</html>
 <script>
     document.querySelector('#submit').onclick = function(e){
         e.preventDefault();
@@ -61,4 +66,3 @@
         }
     }
 </script>
-</html>

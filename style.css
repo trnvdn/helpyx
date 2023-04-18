@@ -4,76 +4,123 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    background-color: #041C32;
     color: #ECB365;
 }
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    position: relative;
+}
+
 a{
     text-decoration: none;
 }
-p
-{
+.main__p{
     margin-left: 25px;
     margin-right: 25px;
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 30px;
 }
-h1 
+.main__h1 
 {
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    margin-left: auto;
-    margin-top: auto;
     font-size: 56px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
-h2{
+.main__h2{
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    margin-left: auto;
-    margin-top: auto;
+    text-align: center;
     font-size: 40px;
     font-weight: bold;
+    background-color: #041C32;
+
     font-family: 'Times New Roman', Times, serif;
 }
-body{
+.page__body{
     font-family: sans-serif;
-    background-color: #064663
+    background-color: #041C32;
 }
-header
-{
+.header {
     position: fixed;
-    top : 0;
+    top: 0;
     left: 0;
     right: 0;
     background-color: #ECB365;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 8%;
     box-shadow: 0 5px 15px #3a94bd;
-} 
-header .logo
+    
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    align-items: center;
+  }
+
+  .header > * {
+    grid-column: span 1;
+  } 
+.header__logo
 {
+    text-align: center;
+    background-color: #000;
     font-size: 30px;
     font-weight: 900;
     transition: .5s;
-} 
-header .logo:hover
+    max-width: 200px;
+}
+ @media (max-width:500px) {
+    p{
+        font-size: 14px;
+    }
+    .header__logo
+    {
+        background-color: #041C32;
+        font-size: 20px;
+        font-weight: 600;
+        transition: .5s;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: 1%;
+    }
+    .main__fixedbox {
+        margin-right: 5%;
+        list-style: none;
+        position: absolute; /* задаем абсолютную позицию для элемента "main__fixedbox" */
+        text-align: center;
+        bottom: 10%;
+        left: 3%;
+        right: 3%; /* задаем правую границу элемента */
+        background-color: white;
+      }
+    .fixedbox__link{
+        font-size: 15px;
+        color: #000000;
+        transition: .5s;
+    }
+ }
+.header__logo:hover
 {
     transform: scale(1.2);
 }
-header nav{
+.header__nav{
+grid-column: 3/4;
     background-color: #ECB365;
 }
-header nav a{
+.header__link{
     background-color: #ECB365;
 }
-header nav ul li 
+.nav__item
 {
+    background-color: #064663;
     position: relative;
     float: left;
     padding: 0px;
@@ -81,38 +128,48 @@ header nav ul li
     list-style: none;
     text-decoration: none;
 }
-header nav ul li a
+.nav__link
 {
     padding: 10px 40px;
-    color: #000;
+    color: #ECB365;
     font-size: 25px;
     display: block;
     text-decoration: none;
     transition: 1s;
 }
-header nav ul li a:hover
+.nav__link:hover
 {
-    background: #3a94bd;
-    color: #fff;
+    color: #064663;
+    color: #ECB365;
     transform: scale(1.2);
 }
-nav ul li ul{
+.nav__sublist{
+    list-style: none;
+    text-align: center;
     position: absolute;
-    width: 350px;
+    width: 140%;
     background: white;
     display: none;
     margin: 0px 0px 0px -75px;
 }
-nav ul li:hover > ul {
+.nav__subitem:hover{
+    background-color: #ECB365;
+}
+.nav__item:hover > ul {
     display: initial;
 }
-nav ul li ul li{
-    width: 300px;
+.nav_subitem{
+    width: 20%;
     margin-left: 25px;
     border: 1px solid rgba(0, 0, 0, .1);
     text-align: center;
     justify-content:space-between;
     align-items: center;
+}
+.nav__sublink{
+    font-size: 32px;
+    color: #064663;
+    text-align: center;
 }
  
 .UpperIMG
@@ -124,13 +181,12 @@ nav ul li ul li{
     width: 100%;
     height: 400px;
 }
-main img{
+.aside__img{
     width: 100%;
-    display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto; 
 }
-main section{
+.main__section{
     width: 30%;
     padding: 30px;
     background-color: #064663   ;
@@ -138,28 +194,38 @@ main section{
     margin-left: 30px;
     transition: 1s;
 }
-main section ol{
-    margin-left: 100px;
+.section__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section__item{
+    background-color: #064663;
+}
+.section__link{
+    background-color: #064663;
     font-size: 30px;
 }
-main section ol li{
-    background-color: #064663;
-}
-main section ol li a{
-    background-color: #064663;
-}
-main section ol li a:hover{
+.section__link:hover{
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
-.OOPadvantages{
+.main__OOPadvantages{
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 30px;
 }
-main aside {
+.main {
+    display: grid;
+    grid-template-rows: repeat(2, 0.5fr);  
+    background-color: #041C32;
+}
+.main__hr{
+    height: 1%;
+}
+.main__aside {
     padding-top: 60px;
     width: 40%;
     padding-left: .5rem;
@@ -167,32 +233,33 @@ main aside {
     float: right;
     box-shadow:inset 5px 0 5px -5px #000000;
 }
-main article{
+.main__article{
     padding: 50px;
     display: flex;
     align-items: center;
     justify-items: center;
 }
-main blockquote p {
+.blockquote__p{
+    font-size: 30px;
     text-align: center;
     margin-left: auto;
     padding: 10px;
     border-radius: 5px;
 }
-main blockquote p::before {
+.blockquote__p::before {
     content: '\201C';
 }
 
-main blockquote p::after {
+.blockquote__p::after {
     content: '\201D';
 }
-.qAuthor {
+.figure__figcation{
     text-align: right;
     font-size: 30px;
     font-weight: bold;
 }
 
-.codeExample {
+.main__codeExample {
     background: #000;
     color: white;
     display: flex;
@@ -202,50 +269,47 @@ main blockquote p::after {
     height: auto;
     width: auto;
 }
-.codeExample p{
+.codeExample__p{
     background: #000;
     text-align: left;
     margin: 20px;
     padding: 30px;
     border-radius: 5px;
+    font-size: 30px;
 }
-
-.bottomLinks, .bottomLinks li   {
-    margin: 0;
-    padding: 0;
-  }
-.bottomLinks{
+.main__bottomLinks{
     text-align: center;
     padding-bottom: 20px;
   }
-.bottomLinks li{
-    display: inline-block;
+.bottomLinks__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
   }
-.bottomLinks a{
+.bottomLinks__link{
     font-size: 30px;
     display: block;
-    margin-inline: 50px;
     padding: 10px 15px;
     text-decoration: none;
     transition: 1s;
   }
-.bottomLinks a:hover{
+.bottomLinks__link:hover{
     background: rgb(233, 169, 20);
     color: white;
     transform:scale(1.2f);
   }
-  form {
+.main__form{
     background-color: rgba(93, 87, 79, 0.909);
 }
-form ul {
+.form__list{
     padding: 30px;
 }
-form ul li{
+.form__item-list{
     list-style: none;
     font-size: 30px;
     padding: 30px;
 }
-form ul input {
+.form__item-input{
 	width: 400px;
 	font-size: 30px;
 	padding: 6px 0 4px 10px;
@@ -255,7 +319,7 @@ form ul input {
 	border-radius: 30px;
     text-align: center;
 }
-textarea  {
+.form__item-textarea{
     height: 200px;
     width: 1000px;
     font-size:30px;
@@ -265,7 +329,7 @@ textarea  {
 	border-radius: 30px;
 	padding: 8px 0 8px 10px;
 }
-form ul button {
+.form__item-button {
     font: bold 11px arial;
     margin-left: 30px;
     text-align: center;
@@ -278,66 +342,101 @@ form ul button {
     color: #064663
 
 }
-input[type="checkbox"] {
+.form__item-checkbox{
     width: 30px;
     height: 30px;
     margin-right: 30px;
 }
-.tips {
+.main__tips{
     margin-left: 120px;
 }
-.tips ol li{
+.tips__item{
     padding-top: 30px;
     font-size: 30px;
 }
-footer{
-    position:relative;
+.footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    width: 100%;
     bottom: 100%;
     left: 0;
     right: 0;
     background-color: #ECB365;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;    
     padding: 0 8%;
     box-shadow: 0 1px 20px rgba(0,0,0);
 }
-footer .fter{
+.footer__signature{
+    width: 100%;
+    text-align:center;
+    margin-top: 4%;
     font-size: 30px;
     font-weight: 900;
     color: #000;
-    transition: .5s;
     text-decoration: none;
-    background-color: #ECB365;
 } 
-footer .fter:hover{
-    transform: scale(1.2);
+.footer__signature:hover{
+    font-size: 40px;
 }
-footer ul{
-    background-color: #ECB365;
-}
-footer ul li {
+.footer__item{
     position:relative;
     float: left;
     padding: 20px;
     margin: 20px;
     list-style: none;
-    background-color: #ECB365;
     
 
 }
-footer ul li a{
+.footer__link{
     line-height: 0px;
     padding: 15px;
     color: #000;
     display: block;
     font-size: 20px;
-    background-color: #ECB365;
     
 
 }
-footer ul li a:hover{
+.footer__link:hover{
     background: #000;
-    color: #fff;
+    color: #ECB365;
 }
 
+.main__fixedbox{
+    margin-right: 5%;
+    list-style: none;
+    position: fixed;
+    text-align: center;
+    bottom: 10%;
+    left: 3%;
+    background-color: white;
+}
+@media(max-width: 965px)
+{
+    .main__fixedbox{
+        margin-left: 3%;
+        list-style: none;
+        position: fixed;
+        text-align: center;
+        bottom: 10%;
+        left: 3%;
+        background-color: white;
+    }
+    .fixedbox__link{
+        font-size: 15px;
+        color: #000000;
+        transition: .5s;
+    }
+}
+
+.fixedbox__link{
+    font-size: 20px;
+    color: #000000;
+    transition: .5s;
+}
+.main__fixedbox:hover{
+    transform: scale(1.2);
+}
+
+.fexedbox__error{
+    color: red  ;
+}

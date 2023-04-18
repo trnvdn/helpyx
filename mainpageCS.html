@@ -3,54 +3,60 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Безкоштовний туторіал по C#">
+    <meta name="keywords" content="C# гайд,C# туторіал,вчити C#">
+    <meta name="author" content="Терновий Данііл">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELPYX</title>
 </head>
-<body style="background-color: gray;">
-    <header>
-        <a href="main.html" class="logo">HELPYX</a>
-        <nav>
-            <ul>
-                <li><a href="main.html">На головну</a></li>
-                <li><a href="#">Навчання</a>
-                <ul>
-                    <li><a href="mainpageCS.html">C#</a></li>
-                    <li><a href="ContactsPage.html">Зворотній зв'язок</a></li>
+<div class="page">
+    <body style="background-color: gray;">
+        <header class="header">
+            <a href="main.html" class="header__logo">HELPYX</a>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="main.html" class="nav__link">На головну</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Навчання</a>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="mainpageCS.html" class="nav__sublink">C#</a></li>
+                            <li class="nav__subitem"><a href="ContactsPage.html" class="nav__sublink">Зворотній зв'язок</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>    
-    <div class="UpperIMG"></div>
-    <h1>C#</h1>
-    <main>
-        <section>
-            <ol>
-                <li><a href="#first">Визначення</a></li>
-                <li><a href="#second">Що це таке…</a></li>
-                <li><a href="#third">Типізація даних</a></li>
-                <li><a href="#four">Математичні оператори</a></li>
-                <li><a href="#roadmap">Відео та корисні сайти</a></li> 
+            </nav>
+        </header>
+        <li class="main__fixedbox">
+            <a href="ContactsPage.html" class="fixedbox__link">Пом<span class="fexedbox__error">И</span>тили помилку?</a>
+        </li>   
+        <div class="UpperIMG"></div>
+    <main class="main">
+        <h1 class="main__h1">C#</h1>
+        <section class="main__section">
+            <ol class="section__list">
+                <li class="section__item"><a href="#first" class="section__link">Визначення</a></li>
+                <li class="section__item"><a href="#second" class="section__link">Що це таке…</a></li>
+                <li class="section__item"><a href="#third" class="section__link">Типізація даних</a></li>
+                <li class="section__item"><a href="#four" class="section__link">Математичні оператори</a></li>
+                <li class="section__item"><a href="#roadmap" class="section__link">Відео та корисні сайти</a></li> 
             </ol>
         </section>
-        <hr>
-        <article>
-            <figure>
-               <blockquote>
-                    <p>Більшість програм на сьогоднішній день подібні до єгипетських пірамід з мільйона цеглинок одна на одну і без конструктивної цілісності — вони просто побудовані грубою силою і тисячами рабів.</p>
+        <hr class="main__hr">
+        <article class="main__article">
+            <figure class="article__figure">
+               <blockquote class="figure__blockquote">
+                    <p class="blockquote__p">Більшість програм на сьогоднішній день подібні до єгипетських пірамід з мільйона цеглинок одна на одну і без конструктивної цілісності — вони просто побудовані грубою силою і тисячами рабів.</p>
                 </blockquote>
-                <figcaption class="qAuthor">—Alan Kay</figcaption>
+                <figcaption class="figure__figcation">—Alan Kay</figcaption>
             </figure>
         </article>
-        <h2 id="first">Визначення</h2>
-        <p>C# — об'єктно-орієнтована мова програмування з безпечною системою типізації для платформи .NET. Розроблена Андерсом Гейлсбергом, Скотом Вілтамутом та Пітером Гольде під егідою Microsoft Research (належить Microsoft).</p>
-        <h2 id="second">Що це таке...</h2>
-        <p>У визначенні були згадані слова «об’єктно орієнтована», «безпечна система типізації». Згадаємо що таке ООП(об’єктно орієнтовне програмування).
+        <h2 class="main__h2" id="first">Визначення</h2>
+        <p class="main__p">C# — об'єктно-орієнтована мова програмування з безпечною системою типізації для платформи .NET. Розроблена Андерсом Гейлсбергом, Скотом Вілтамутом та Пітером Гольде під егідою Microsoft Research (належить Microsoft).</p>
+        <h2 class="main__h2" id="second">Що це таке...</h2>
+        <p class="main__p">У визначенні були згадані слова «об’єктно орієнтована», «безпечна система типізації». Згадаємо що таке ООП(об’єктно орієнтовне програмування).
             Це одна з парадигм(спосіб класифікації мов програмування на основі їхніх особливостей), яка розглядає програму як множину «об'єктів», що взаємодіють між собою. Основу ООП складають чотири основні концепції: інкапсуляція, успадкування, поліморфізм та абстракція. Однією з переваг ООП є краща модульність програмного забезпечення (тисячу функцій процедурної мови, в ООП можна замінити кількома десятками класів із своїми методами)
             На думку Алана Кея, розробника мови Smalltalk, якого вважають одним з «батьків-засновників» ООП, об'єктоорієнтований підхід полягає в наступному наборі основних принципів:
         </p>
-        <ol class="OOPadvantages">
+        <ol class="main__OOPadvantages">
             <li>Все є об'єктами.</li>
             <li>Всі дії та розрахунки виконуються шляхом взаємодії (обміну даними) між об'єктами, під час якої один об'єкт потребує, щоб інший об'єкт виконав деяку дію. Об'єкти взаємодіють, надсилаючи й отримуючи повідомлення. Повідомлення — це запит на виконання дії, доповнений набором аргументів, які можуть знадобитися під час виконання дії.</li>
             <li>Кожен об'єкт має незалежну пам'ять, яка складається з інших об'єктів.</li>
@@ -58,27 +64,27 @@
             <li>У класі задається поведінка (функціональність) об'єкта. Таким чином усі об'єкти, які є екземплярами одного класу, можуть виконувати одні й ті ж самі дії.</li>
             <li>Класи організовані у єдину деревоподібну структуру з загальним корінням, яка називається ієрархією успадкування. Пам'ять та поведінка, зв'язані з екземплярами деякого класу, автоматично доступні будь-якому класу, розташованому нижче в ієрархічному дереві.</li>
         </ol>
-        <h2 id="third">Типізація даних</h2>
-        <p>Головна мета будь-якої програми полягає в обробці даних. Дані різного типу зберігаються й обробляються по-різному. У будь-якій алгоритмічній мові кожна константа, змінна, результат обчислення виразу або функції повинні мати певний тип.
+        <h2 class="main__h2" id="third">Типізація даних</h2>
+        <p class="main__p">Головна мета будь-якої програми полягає в обробці даних. Дані різного типу зберігаються й обробляються по-різному. У будь-якій алгоритмічній мові кожна константа, змінна, результат обчислення виразу або функції повинні мати певний тип.
 
         Тип даних визначає:</p>
-        <ol class="OOPadvantages">
+        <ol class="main__OOPadvantages">
             <li>внутрішнє представлення даних в пам'яті комп'ютера;</li>
             <li>область значень, які можуть приймати величини цього типу;</li>
             <li>операції та функції, які можна застосовувати до величин цього типу.</li>
         </ol>
-        <p>Основні типи даних часто називають арифметичними, тому що їх можна використовувати в арифметичних операціях. Для опису основних типів мови C# використовують такі службові слова:</p>
-        <ol class="OOPadvantages">
+        <p class="main__p">Основні типи даних часто називають арифметичними, тому що їх можна використовувати в арифметичних операціях. Для опису основних типів мови C# використовують такі службові слова:</p>
+        <ol class="main__OOPadvantages">
             <li>int (цілий) - здатний вміщати у собі цілі числа;</li>
             <li>string - здатний вміщувати будь-який текст</li>
             <li>char (символьний) - здатний вміщати один символ;</li>
             <li>bool (логічний) - логічний тип даних, true або false;</li>
             <li>float (дійсний) - тип данних який здатний вміщувати нецілі числа;</li>
-            <li>Приставка u (unsigned) перед числовими типами даних значить що числа в ній <b>тільки додатні, або дорівнюють нулю!</b>.</li>
+            <li>Приставка u (unsigned) перед числовими типами даних значить що числа в ній <b>тільки додатні, або дорівнюють нулю.</b></li>
         </ol>
-        <p>Об'явлення змінних виглядає так:</p>
-        <section class="codeExample">
-            <p>
+        <p class="main__p">Об'явлення змінних виглядає так:</p>
+        <section class="main__codeExample">
+            <p class="codeExample__p">
                 int a; // цілочисленна змінна<br>
                 string name; // рядок<br>
                 <br>
@@ -91,9 +97,9 @@
                 char vowel = 'a'; // "односимвольна змінна"<br>
             </p>
         </section>
-        <h2 id="four">Математичні оператори</h2>
-        <section class="codeExample">
-            <p>
+        <h2 class="main__h2" id="four">Математичні оператори</h2>
+        <section class="main__codeExample">
+            <p class="codeExample__p">
                 int a = 1 + 1; // 2 <br>
                 Console.WriteLine(a); // вивід результату в консоль<br>
                 <br>
@@ -115,31 +121,32 @@
                 second = 4;<br>
                 x = first % second;// 0<br> </p>
         </section>
-        <h2 id="roadmap">Відео та корисні сайти</h2>
-        <div class="tips">
+        <h2 class="main__h2" id="roadmap">Відео та корисні сайти</h2>
+        <div class="main__tips">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/q_F4PyW8GTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/GhQdlIFylQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/wxznTygnRfQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <ol>
-            <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft Learn</a></li>
-            <li><a href="https://metanit.com/sharp/tutorial/">Metanit</a></li>
+        <ol class="tips__list">
+            <li class="tips__item"><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft Learn</a></li>
+            <li class="tips__item"><a href="https://metanit.com/sharp/tutorial/">Metanit</a></li>
         </ol>
         
     </div>
-        <div class="bottomLinks">
-            <ul>
-                <li><a href="#top">Наверх</a></li>
-                <li><a href="main.html">На головну</a></li>   
+        <div class="main__bottomLinks">
+            <ul class="bottomLinks__list">
+                <li class="bottomLinks__item"><a href="#top" class="bottomLinks__link">Наверх</a></li>
+                <li class="bottomLinks__item"><a href="main.html" class="bottomLinks__link">На головну</a></li>   
             </ul>
         </div>                      
     </main>
-    <footer>
-        <ul>
-            <li><a href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
-            <li><a href="https://www.google.com">Telegram</a></li>
-            <li><a href="mailto:ternak04@gmail.com">Gmail</a></li>
-        </ul>
-        <a href="ContactsPage.html" class="fter">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
-    </footer>
 </body>
+</div>  
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
+            <li class="footer__item"><a class="footer__link" href="https://www.google.com">Telegram</a></li>
+            <li class="footer__item"><a class="footer__link" href="mailto:ternak04@gmail.com">Gmail</a></li>
+        </ul>
+        <a href="ContactsPage.html" class="footer__signature">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
+    </footer>
 </html>

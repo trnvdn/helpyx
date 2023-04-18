@@ -3,66 +3,73 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Безкоштовний туторіал по C#">
+    <meta name="keywords" content="C# гайд,C# туторіал,вчити C#">
+    <meta name="author" content="Терновий Данііл">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HELPYX</title>
 </head>
-<body style="background-color: gray;">
-    <header>
-        <a href="main.html" class="logo">HELPYX</a>
-        <nav>
-            <ul>
-                <li><a href="main.html">На головну</a></li>
-                <li><a href="#">Навчання</a>
-                <ul>
-                    <li><a href="mainpageCS.html">C#</a></li>
-                    <li><a href="ContactsPage.html">Зворотній зв'язок</a></li>
+<div class="page">
+    <body style="background-color: gray;">
+        <header class="header">
+            <a href="main.html" class="header__logo">HELPYX</a>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="main.html" class="nav__link">На головну</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Навчання</a>
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="mainpageCS.html" class="nav__sublink">C#</a></li>
+                            <li class="nav__subitem"><a href="ContactsPage.html" class="nav__sublink">Зворотній зв'язок</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>  
-    <div class="UpperIMG"></div>
-    <h1>Головна сторінка</h1>
-    <main>
-        <section>
-            <ol>
-                <li><a href="#first">Вступ</a></li>
-                <li><a href="#second">Мета</a></li>
-            </ol>
-        </section>
-        <hr>
-        <aside>
-            <img src="http://ipkey.com.ua/media/k2/items/cache/a47bdb2ae5a99dc68185bc94a1d4224c_XL.jpg" alt="coding">
-        </aside>
-        <h2 id="first">1. Вступ</h2>
-        <p>Сьогочасне життя вже складно уявити без комп’ютерів. Тільки уявіть, ще декілька десятків років тому люди навіть не сприймали серйозно мобільні телефони, а зараз шматок кремнію виводить зображення на ваш монітор та надає можливість творити, грати, моделювати та вирішувати математичні задачі. Усього цього б не було, якби людство не відкрило для себе можливість програмувати код, який керує процесором.
-        <article>
-            <figure>
-               <blockquote>
-                    <p>Для мене довгий час було загадкою, як щось дуже дороге і технологічне може бути непотрібним. І незабаром я усвідомив, що комп'ютер — це дурна машина, яка має здібності виконувати неймовірно розумні речі, тоді як програмісти — це розумні люди, які мають талант робити неймовірні дурості.</p>
-                </blockquote>
-                <figcaption class="qAuthor">— Bill Bryson</figcaption>
-            </figure>
-        </article>
-        <h2 id="second">2. Мета</h2>
-        <p>Мета цього сайту — дати початкові вказівки щодо вивчення С#,python,java script.
-        Обіцяю що текст буде максимально простим та зрозумілим, а наповнення сайту допоможе вам стати на шлях вивчення мов програмування. Контент обов’язково буде цікавим, в кінці після вивчення елементарних основ, ви отримаєте посилання на інформаційні сайти та відео.
-        </p>
-        <div class="bottomLinks">
-            <ul>
-                <li><a href="#top">Наверх</a></li>
-                <li><a href="main.html">На головну</a></li>   
-            </ul>
-        </div>                      
-    </main>
-</body>
-<footer>
-    <ul>
-        <li><a href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
-        <li><a href="https://www.google.com">Telegram</a></li>
-        <li><a href="mailto:ternak04@gmail.com">Gmail</a></li>
-    </ul>
-    <a href="ContactsPage.html" class="fter">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
-</footer>
+            </nav>
+        </header>
+            <li class="main__fixedbox">
+                <a href="ContactsPage.html" class="fixedbox__link">Пом<span class="fexedbox__error">И</span>тили помилку?</a>
+            </li>
+        <div class="UpperIMG"></div>
+        <main class="main">
+            <h1 class="main__h1">Головна сторінка</h1>
+            <section class="main__section">
+                <ol class="section__list">
+                    <li class="section__item"><a href="#first" class="section__link">Вступ</a></li>
+                    <li class="section__item"><a href="#second" class="section__link">Мета</a></li>
+                </ol>
+            </section>
+            <hr class="main__hr">
+            <aside class="main__aside">
+                <img class="aside__img" src="http://ipkey.com.ua/media/k2/items/cache/a47bdb2ae5a99dc68185bc94a1d4224c_XL.jpg" alt="coding">
+            </aside>
+            <h2 class="main__h2" id="first">1. Вступ</h2>
+            <p class="main__p">Сьогочасне життя вже складно уявити без комп’ютерів. Тільки уявіть, ще декілька десятків років тому люди навіть не сприймали серйозно мобільні телефони, а зараз шматок кремнію виводить зображення на ваш монітор та надає можливість творити, грати, моделювати та вирішувати математичні задачі. Усього цього б не було, якби людство не відкрило для себе можливість програмувати код, який керує процесором.
+            <article class="main__article">
+                <figure class="article__figure">
+                   <blockquote class="figure__blockquote">
+                        <p class="blockquote__p">Для мене довгий час було загадкою, як щось дуже дороге і технологічне може бути непотрібним. І незабаром я усвідомив, що комп'ютер — це дурна машина, яка має здібності виконувати неймовірно розумні речі, тоді як програмісти — це розумні люди, які мають талант робити неймовірні дурості.</p>
+                    </blockquote>
+                    <figcaption class="figure__figcation">— Bill Bryson</figcaption>
+                </figure>
+            </article>
+            <h2 class="main__h2" id="second">2. Мета</h2>
+            <p class="main__p">Мета цього сайту — дати початкові вказівки щодо вивчення С#,python,java script.
+            Обіцяю що текст буде максимально простим та зрозумілим, а наповнення сайту допоможе вам стати на шлях вивчення мов програмування. Контент обов’язково буде цікавим, в кінці після вивчення елементарних основ, ви отримаєте посилання на інформаційні сайти та відео.
+            </p>
+            <div class="main__bottomLinks">
+                <ul class="bottomLinks__list">
+                    <li class="bottomLinks__item"><a href="#top" class="bottomLinks__link">Наверх</a></li>
+                    <li class="bottomLinks__item"><a href="main.html" class="bottomLinks__link">На головну</a></li>   
+                </ul>
+            </div>                      
+        </main>
+    </body>
+</div>  
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="https://www.instagram.com/iseedevilinmyroom/">Instagram</a></li>
+            <li class="footer__item"><a class="footer__link" href="https://www.google.com">Telegram</a></li>
+            <li class="footer__item"><a class="footer__link" href="mailto:ternak04@gmail.com">Gmail</a></li>
+        </ul>
+        <a href="ContactsPage.html" class="footer__signature">Ternovyi Daniil, <script>document.write(new Date().getFullYear());</script></a> 
+    </footer>
 </html>
