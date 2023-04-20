@@ -25,16 +25,16 @@ a{
 }
 .main__h1 
 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: center;
     font-size: 56px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
 .main__h2{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: center;
     text-align: center;
     font-size: 40px;
@@ -75,38 +75,7 @@ a{
     transition: .5s;
     max-width: 200px;
 }
- @media (max-width:500px) {
-    p{
-        font-size: 14px;
-    }
-    .header__logo
-    {
-        background-color: #041C32;
-        font-size: 20px;
-        font-weight: 600;
-        transition: .5s;
-    }
-    .footer{
-        display: flex;
-        flex-direction: column;
-        height: 1%;
-    }
-    .main__fixedbox {
-        margin-right: 5%;
-        list-style: none;
-        position: absolute; /* задаем абсолютную позицию для элемента "main__fixedbox" */
-        text-align: center;
-        bottom: 10%;
-        left: 3%;
-        right: 3%; /* задаем правую границу элемента */
-        background-color: white;
-      }
-    .fixedbox__link{
-        font-size: 15px;
-        color: #000000;
-        transition: .5s;
-    }
- }
+
 .header__logo:hover
 {
     transform: scale(1.2);
@@ -346,13 +315,16 @@ grid-column: 3/4;
     width: 30px;
     height: 30px;
     margin-right: 30px;
+    cursor: pointer;
 }
-.main__tips{
-    margin-left: 120px;
+.tips__vid{
+    padding: 0 5% 0 5%;
+    width: 30%;
+    height: 70%;
 }
-.tips__item{
-    padding-top: 30px;
-    font-size: 30px;
+.tips__list{
+    padding-left: 10%;
+    padding-bottom: 10%;
 }
 .footer{
     position: relative;
@@ -365,6 +337,7 @@ grid-column: 3/4;
     background-color: #ECB365;
     padding: 0 8%;
     box-shadow: 0 1px 20px rgba(0,0,0);
+    width: 100%;
 }
 .footer__signature{
     width: 100%;
@@ -410,6 +383,42 @@ grid-column: 3/4;
     left: 3%;
     background-color: white;
 }
+
+
+.fixedbox__link{
+    font-size: 20px;
+    color: #000000;
+    transition: .5s;
+}
+.main__fixedbox:hover{
+    transform: scale(1.2);
+}
+
+.fexedbox__error{
+    color: red  ;
+}
+
+
+.shadow-box {
+    width: 100%;
+    height: 50%;
+    margin: 20px auto;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(255, 0, 0, 0.75);
+  }
+  
+  .shadow-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(140, 255, 0, 0.75);
+  }
+  
+
+
 @media(max-width: 965px)
 {
     .main__fixedbox{
@@ -427,16 +436,63 @@ grid-column: 3/4;
         transition: .5s;
     }
 }
+@media (max-width:600px) {
+    .main__OOPadvantages{
+        font-size: 13px;
+    }
+    .codeExample__p{
+        font-size: 13px;
+    }
+    .main__p{
+        font-size: 15px;
+    }
+    .main__h1{
+        font-size: 20px;
+    }
+    .main__h2{
+        font-size: 18px;
+    }
 
-.fixedbox__link{
-    font-size: 20px;
-    color: #000000;
-    transition: .5s;
-}
-.main__fixedbox:hover{
-    transform: scale(1.2);
-}
-
-.fexedbox__error{
-    color: red  ;
-}
+    .header__logo
+    {
+        background-color: #041C32;
+        font-size: 20px;
+        font-weight: 600;
+        transition: .5s;
+    }
+    .footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 1%;
+    }
+    .main__fixedbox {
+        margin-right: 5%;
+        list-style: none;
+        position: fixed; /* задаем абсолютную позицию для элемента "main__fixedbox" */
+        text-align: center;
+        bottom: 10%;
+        left: 3%;
+        right: 3%; /* задаем правую границу элемента */
+        background-color: white;
+      }
+    .fixedbox__link{
+        font-size: 15px;
+        color: #000000;
+        transition: .5s;
+    }
+    .main__tips{    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottomLinks__link{
+        font-size: 13px;
+    }
+    .blockquote__p{
+        font-size: 13px;
+    }
+    .figure__figcation{
+        font-size: 15px;
+    }
+ }
